@@ -8,6 +8,7 @@ import fotoCalorias from '../assets/images/fotoCalorias.jpg';
 export default function Home() {
   const [posts, setPosts] = useState([]);
 
+  //Puxa os posts do localStorage
   useEffect(() => {
     const saved = localStorage.getItem('forumPosts');
     if (saved) {
@@ -15,10 +16,11 @@ export default function Home() {
     }
   }, []);
 
-  // Pega os 3 posts mais recentes (ou aleatórios — aqui vamos pegar os primeiros 3)
+  // Pega os 3 posts mais recentes
   const recentPosts = posts.slice(0, 3);
 
   // Se tiver menos de 3 posts, preenche com placeholders revisar isso 
+  // Ajustar erro do terceiro card que não pucha os valores do post de id 3
   const displayPosts = recentPosts.length > 0
     ? recentPosts
     : [
@@ -53,18 +55,14 @@ export default function Home() {
               <p className="card-text text-secondary">
                 Aqui, você pode tirar dúvidas, celebrar conquistas e se conectar com pessoas que compartilham da mesma jornada. Porque cuidar de si não deveria depender de quanto você pode pagar e ninguém precisa fazer isso sozinho.
               </p>
-              
-              <div className="mt-auto">
-              {/* Pode adicionar um botão depois, como "Saiba mais" */}
-              </div>
             </div>
           </div>
       </div>
       </div>   
       <br/>
-      {/* Layout em Grid (Bootstrap) */}
+      {/* Grid em Bootstrap */}
       <div className="row g-4">
-        {/* Coluna Esquerda - Post 1 */}
+        {/* Coluna Esquerda - Post 1 (destaque maior na borda)  */}
         <div className="col-md-4">
           <Link to="/forum" className="text-decoration-none">
             <div className="card h-100" style={{ border: '2px solid #1976D2' }}>
@@ -84,7 +82,7 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Coluna Central - Post 2 (destaque maior) */}
+        {/* Coluna Central - Post 2 */}
         <div className="col-md-4">
           <Link to="/imc" className="text-decoration-none">
             <div className="card h-100">
@@ -144,10 +142,10 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Coluna Central - Post 2 (destaque maior) */}
+        {/* Coluna Central - Post 2 */}
         <div className="col-md-4">
           <Link to={`/forum/${displayPosts[2].id}`} className="text-decoration-none">
-            <div className="card h-100" style={{ border: '2px solid #1976D2' }}>
+            <div className="card h-100">
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{displayPosts[2]?.title || 'Post em destaque'}</h5>
                 <p className="card-text text-secondary">
@@ -159,10 +157,10 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Coluna Direita - Post 3 */}
+        {/* Coluna Direita - Post 3 (destaque maior) */}
         <div className="col-md-4">
           <Link to={`/forum/${displayPosts[3]?.id}`} className="text-decoration-none">
-            <div className="card h-100">
+            <div className="card h-100"  style={{ border: '2px solid #1976D2' }}>
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{displayPosts[3]?.title || 'Post em destaque'}</h5>
                 <p className="card-text text-secondary">

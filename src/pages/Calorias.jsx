@@ -1,5 +1,6 @@
-// src/pages/Calorias.jsx
+// Página que calcula as calorias totais 
 import { useState, useEffect } from 'react';
+//Importa todos os alimentos armazenados no arquivo JSON
 import alimentosData from '../data/alimentos.json';
 import fotoCalorias from '../assets/images/fotoCalorias.jpg';
 
@@ -47,7 +48,7 @@ export default function Calorias() {
 
   // Atualizar quantidade
   const updateQuantity = (id, newGrams) => {
-  // Se for vazio, define como null (sem remover o item)
+  // Se for vazio, define como null
   if (newGrams === '') {
     setSelectedAlimentos(
       selectedAlimentos.map(item =>

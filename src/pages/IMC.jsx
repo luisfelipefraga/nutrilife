@@ -8,10 +8,11 @@ export default function IMC() {
 
   const calcularIMC = (e) => {
     e.preventDefault();
+    //variavéis para o calculo do IMC
     const p = parseFloat(peso);
     const a = parseFloat(altura);
 
-   //Valida se os valores são 
+   //Valida se os valores são nulos ou 0
     if (isNaN(p) || isNaN(a) || a <= 0 || p <= 0) {
       alert('Insira valores válidos.');
       return;
@@ -33,6 +34,7 @@ export default function IMC() {
   return (
     <div className="container py-2">
       <div className="mb-4">
+        {/*Imagem do início da página*/}
         <img 
           src={fotoIMC} 
           alt="Frutas saudáveis" 
@@ -59,8 +61,8 @@ export default function IMC() {
               value={peso}
               onChange={(e) => setPeso(e.target.value)}
               step="0.1"
-              min="10"
-              required
+              min="10" //Define que o minimo de peso aceitavel é 10kg
+              required //Diz que é necessário colocar um valor
             />
           </div>
           <div className="mb-3">
@@ -71,9 +73,9 @@ export default function IMC() {
               value={altura}
               onChange={(e) => setAltura(e.target.value)}
               step="0.01"
-              min="0.5"
-              max="2.5"
-              required
+              min="0.5" //Define que o minimo de altura aceitavel é 0,5m
+              max="2.5" //Define que o máximo de altura aceitavel é 2.5m
+              required //Diz que é necessário colocar um valor
             />
           </div>
           <button type="submit" className="btn btn-primary">Calcular IMC</button>

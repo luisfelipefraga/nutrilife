@@ -1,3 +1,4 @@
+//Tela da publicação
 import { backdropClasses } from '@mui/material';
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
@@ -43,7 +44,7 @@ export default function ForumPost() {
     localStorage.setItem('forumPosts', JSON.stringify(updatedPosts));
     setNewComment('');
   };
-
+  //Cria uma validação com o usuário para excluir o post
   const handleDelete = (postId) => {
   if (!window.confirm("Tem certeza que deseja excluir este post?")) return;
 
@@ -53,6 +54,7 @@ export default function ForumPost() {
   navigate('/forum'); // volta para a lista
 };
 
+//Valida se o post existe ou não
   if (!post) {
     return (
       <div className="container py-5">

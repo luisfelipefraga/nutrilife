@@ -1,20 +1,24 @@
+//Tela de uma nova publicação
+
 import { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom'; // ✅ Importação correta do Link
+import { useNavigate, Link } from 'react-router-dom';
 
 export default function CreatePost() {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const navigate = useNavigate();
 
+  //Permite usar a tecla 'Enter' para submeter
   const handleSubmit = (e) => {
     e.preventDefault();
     
+    //Valida se o valor é nulo
     if (!title.trim() || !content.trim()) {
       alert('Preencha título e conteúdo.');
       return;
     }
 
-    // Carrega posts existentes (com segurança)
+    // Carrega posts existentes
     const saved = localStorage.getItem('forumPosts');
     let posts = [];
     try {

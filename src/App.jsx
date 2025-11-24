@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ForumList from './pages/ForumList';
-import CreatePost from './pages/CreatePost'; // ← Nova rota
+import CreatePost from './pages/CreatePost';
 import ForumPost from './pages/ForumPost';
 import IMC from './pages/IMC';
 import Calorias from './pages/Calorias';

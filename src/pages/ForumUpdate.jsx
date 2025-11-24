@@ -19,10 +19,10 @@ export default function ForumUpdate() {
       }
     }
   }, [id]);
-
+  //Permite usar a tecla 'Enter' para submeter
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    //Valida se o valor é nulo
     if (!title.trim() || !content.trim()) {
       alert('Preencha título e conteúdo.');
       return;
@@ -45,7 +45,7 @@ export default function ForumUpdate() {
           ...p,
           title: title.trim(),
           content: content.trim(),
-          date: "Agora" // Atualiza a data para "Agora"
+          date: Date.now() // Atualiza a data para "Agora"
         };
       }
       return p;
