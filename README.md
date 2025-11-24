@@ -16,7 +16,7 @@
 - 🥗 **Receitas da comunidade**  (a ser implementado!)
 - 📏 **Calculadora de IMC** com classificação automática  
 - 🔥 **Calculadora de calorias** com:  
-  - Busca por nome de alimentos registrados no JSON 
+  - Busca por nome de alimentos registrados no arquivo JSON 
   - Ajuste de gramagem (base 100g)  
   - Cálculo automático do total  
 - 🌐 Interface responsiva (funciona em celular, tablet e desktop)
