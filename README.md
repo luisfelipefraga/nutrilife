@@ -1,16 +1,41 @@
-# React + Vite
+# 🥗 NutriLife — Fórum de Nutrição e Bem-Estar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6CAEDF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Currently, two official plugins are available:
+> Um projeto web interativo para compartilhar conhecimentos sobre alimentação saudável, calcular IMC, contar calorias e trocar receitas — tudo em um só lugar!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- ✅ **Fórum interativo**: Criar, visualizar, editar e excluir posts  
+- 💬 **Comentários em tempo real** (salvos localmente no `localStorage`)  
+- 🥗 **Receitas da comunidade**  
+- 📏 **Calculadora de IMC** com classificação automática  
+- 🔥 **Calculadora de calorias** com:  
+  - Busca por nome de alimento  
+  - Ajuste de gramagem (base 100g)  
+  - Cálculo automático do total  
+- 🌐 Interface responsiva (funciona em celular, tablet e desktop)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ▶️ Como executar o projeto
+
+### Pré-requisitos
+- [Node.js](https://nodejs.org/) versão **20.19.0 ou superior**
+
+### Passo a passo
+```bash
+# 1. Clone ou baixe o projeto
+git clone https://github.com/luisfelipefraga/nutrilife.git
+cd nutrilife
+
+# 2. Instale as dependências
+npm install
+
+# 3. Inicie o servidor de desenvolvimento
+npm run dev
