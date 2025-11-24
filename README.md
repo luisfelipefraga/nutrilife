@@ -13,10 +13,10 @@
 
 - ✅ **Fórum interativo**: Criar, visualizar, editar e excluir posts  
 - 💬 **Comentários em tempo real** (salvos localmente no `localStorage`)  
-- 🥗 **Receitas da comunidade**  
+- 🥗 **Receitas da comunidade**  (a ser implementado!)
 - 📏 **Calculadora de IMC** com classificação automática  
 - 🔥 **Calculadora de calorias** com:  
-  - Busca por nome de alimento  
+  - Busca por nome de alimentos registrados no JSON 
   - Ajuste de gramagem (base 100g)  
   - Cálculo automático do total  
 - 🌐 Interface responsiva (funciona em celular, tablet e desktop)
@@ -39,3 +39,6 @@ npm install
 
 # 3. Inicie o servidor de desenvolvimento
 npm run dev
+
+# 4. Abra o link no navegador
+http://localhost:5173
