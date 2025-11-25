@@ -1,45 +1,57 @@
 //Tela com todas as publicações
 
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import fotoForum from '../assets/images/fotoForum.jpg';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import fotoForum from "../assets/images/fotoForum.jpg";
 
 export default function ForumList() {
-  
-
   //Verifica se tem algum post já guardado no localstorage se nã tiver posta 2 posts aleatórios
   const [posts, setPosts] = useState(() => {
-    const initial = localStorage.getItem('forumPosts');
+    const initial = localStorage.getItem("forumPosts");
     return initial
       ? JSON.parse(initial)
       : [
-          { id: 1, title: "Como substituir açúcar?", author: "Ana L.", date: "Ontem", replies: 3, content: "Estou tentando reduzir o açúcar... alguém tem dicas?" },
-          { id: 2, title: "Suplementos são necessários?", author: "Carlos M.", date: "Hoje", replies: 5, content: "Estou na academia há 3 meses..." },
+          {
+            id: 1,
+            title: "Como substituir açúcar?",
+            author: "Ana L.",
+            date: "Ontem",
+            replies: 3,
+            content: "Estou tentando reduzir o açúcar... alguém tem dicas?",
+          },
+          {
+            id: 2,
+            title: "Suplementos são necessários?",
+            author: "Carlos M.",
+            date: "Hoje",
+            replies: 5,
+            content: "Estou na academia há 3 meses...",
+          },
         ];
   });
 
   //Armazena os posts
   useEffect(() => {
-    localStorage.setItem('forumPosts', JSON.stringify(posts));
+    localStorage.setItem("forumPosts", JSON.stringify(posts));
   }, [posts]);
 
   return (
     <div className="container py-2">
       <div className="mb-4">
         {/*Imagem do início da página*/}
-        <img 
-          src={fotoForum} 
-          alt="Frutas saudáveis" 
+        <img
+          src={fotoForum}
+          alt="Frutas saudáveis"
           className="w-100 rounded"
           style={{
-            height: '300px',
-            objectFit: 'cover',
-            objectPosition: 'top'
+            height: "300px",
+            objectFit: "cover",
+            objectPosition: "top",
           }}
         />
       </div>
 
-      {/*Leva para uma página para criar um novo post*/}    
+      {/*Leva para uma página para criar um novo post*/}
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h1>Fórum de Discussões</h1>
         <Link to="/forum/novo" className="btn btn-primary">

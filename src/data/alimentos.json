@@ -1,102 +1,802 @@
 [
-  { "id": 1, "nome": "Arroz branco cozido", "caloriasPor100g": 130, "proteina": 2.7, "carboidrato": 28.2, "gordura": 0.3 },
-  { "id": 2, "nome": "Arroz integral cozido", "caloriasPor100g": 111, "proteina": 2.6, "carboidrato": 23.5, "gordura": 0.9 },
-  { "id": 3, "nome": "Arroz parboilizado cozido", "caloriasPor100g": 125, "proteina": 2.8, "carboidrato": 27.0, "gordura": 0.5 },
-  { "id": 4, "nome": "Feijão carioca cozido", "caloriasPor100g": 77, "proteina": 4.8, "carboidrato": 14.0, "gordura": 0.5 },
-  { "id": 5, "nome": "Feijão preto cozido", "caloriasPor100g": 76, "proteina": 4.9, "carboidrato": 13.7, "gordura": 0.5 },
-  { "id": 6, "nome": "Lentilha cozida", "caloriasPor100g": 116, "proteina": 9.0, "carboidrato": 20.1, "gordura": 0.4 },
-  { "id": 7, "nome": "Peito de frango grelhado", "caloriasPor100g": 165, "proteina": 31.0, "carboidrato": 0.0, "gordura": 3.6 },
-  { "id": 8, "nome": "Coxa de frango assada (sem pele)", "caloriasPor100g": 180, "proteina": 26.0, "carboidrato": 0.0, "gordura": 7.5 },
-  { "id": 9, "nome": "Alcatra grelhada", "caloriasPor100g": 185, "proteina": 28.0, "carboidrato": 0.0, "gordura": 7.0 },
-  { "id": 10, "nome": "Maminha grelhada", "caloriasPor100g": 165, "proteina": 29.0, "carboidrato": 0.0, "gordura": 5.0 },
-  { "id": 11, "nome": "Filé mignon grelhado", "caloriasPor100g": 150, "proteina": 30.0, "carboidrato": 0.0, "gordura": 3.5 },
-  { "id": 12, "nome": "Carne moída magra (95% magra)", "caloriasPor100g": 140, "proteina": 26.0, "carboidrato": 0.0, "gordura": 4.0 },
-  { "id": 13, "nome": "Salmão grelhado", "caloriasPor100g": 208, "proteina": 25.0, "carboidrato": 0.0, "gordura": 12.0 },
-  { "id": 14, "nome": "Tilápia assada", "caloriasPor100g": 128, "proteina": 26.0, "carboidrato": 0.0, "gordura": 2.7 },
-  { "id": 15, "nome": "Atum em lata (em água)", "caloriasPor100g": 116, "proteina": 25.5, "carboidrato": 0.0, "gordura": 0.9 },
-  { "id": 16, "nome": "Ovo cozido", "caloriasPor100g": 155, "proteina": 12.6, "carboidrato": 1.1, "gordura": 10.6 },
-  { "id": 17, "nome": "Omelete simples (1 ovo + 1 col. chá óleo)", "caloriasPor100g": 180, "proteina": 10.0, "carboidrato": 0.8, "gordura": 14.0 },
-  { "id": 18, "nome": "Queijo mussarela", "caloriasPor100g": 280, "proteina": 22.0, "carboidrato": 2.0, "gordura": 22.0 },
-  { "id": 19, "nome": "Queijo prato", "caloriasPor100g": 340, "proteina": 25.0, "carboidrato": 1.0, "gordura": 28.0 },
-  { "id": 20, "nome": "Queijo cottage", "caloriasPor100g": 98, "proteina": 12.0, "carboidrato": 3.0, "gordura": 4.0 },
-  { "id": 21, "nome": "Leite integral", "caloriasPor100g": 64, "proteina": 3.2, "carboidrato": 4.8, "gordura": 3.6 },
-  { "id": 22, "nome": "Leite desnatado", "caloriasPor100g": 35, "proteina": 3.4, "carboidrato": 5.0, "gordura": 0.1 },
-  { "id": 23, "nome": "Iogurte natural integral", "caloriasPor100g": 61, "proteina": 3.5, "carboidrato": 4.7, "gordura": 3.3 },
-  { "id": 24, "nome": "Iogurte natural desnatado", "caloriasPor100g": 59, "proteina": 5.3, "carboidrato": 7.0, "gordura": 0.4 },
-  { "id": 25, "nome": "Banana prata", "caloriasPor100g": 89, "proteina": 1.1, "carboidrato": 22.8, "gordura": 0.3 },
-  { "id": 26, "nome": "Maçã", "caloriasPor100g": 52, "proteina": 0.3, "carboidrato": 13.8, "gordura": 0.2 },
-  { "id": 27, "nome": "Laranja", "caloriasPor100g": 47, "proteina": 0.9, "carboidrato": 11.8, "gordura": 0.1 },
-  { "id": 28, "nome": "Mamão", "caloriasPor100g": 43, "proteina": 0.5, "carboidrato": 10.8, "gordura": 0.1 },
-  { "id": 29, "nome": "Abacaxi", "caloriasPor100g": 50, "proteina": 0.5, "carboidrato": 12.6, "gordura": 0.1 },
-  { "id": 30, "nome": "Morango", "caloriasPor100g": 32, "proteina": 0.7, "carboidrato": 7.7, "gordura": 0.3 },
-  { "id": 31, "nome": "Abacate", "caloriasPor100g": 160, "proteina": 2.0, "carboidrato": 8.5, "gordura": 14.7 },
-  { "id": 32, "nome": "Aveia em flocos", "caloriasPor100g": 389, "proteina": 16.9, "carboidrato": 66.3, "gordura": 6.9 },
-  { "id": 33, "nome": "Quinoa cozida", "caloriasPor100g": 120, "proteina": 4.4, "carboidrato": 21.3, "gordura": 1.9 },
-  { "id": 34, "nome": "Batata doce cozida", "caloriasPor100g": 86, "proteina": 1.6, "carboidrato": 20.1, "gordura": 0.1 },
-  { "id": 35, "nome": "Batata inglesa cozida", "caloriasPor100g": 77, "proteina": 2.0, "carboidrato": 17.5, "gordura": 0.1 },
-  { "id": 36, "nome": "Mandioca cozida", "caloriasPor100g": 125, "proteina": 1.0, "carboidrato": 29.0, "gordura": 0.3 },
-  { "id": 37, "nome": "Brócolis cozido", "caloriasPor100g": 35, "proteina": 2.8, "carboidrato": 7.2, "gordura": 0.4 },
-  { "id": 38, "nome": "Couve refogada", "caloriasPor100g": 45, "proteina": 3.0, "carboidrato": 7.5, "gordura": 1.5 },
-  { "id": 39, "nome": "Espinafre cozido", "caloriasPor100g": 23, "proteina": 2.9, "carboidrato": 3.6, "gordura": 0.4 },
-  { "id": 40, "nome": "Tomate cru", "caloriasPor100g": 18, "proteina": 0.9, "carboidrato": 3.9, "gordura": 0.2 },
-  { "id": 41, "nome": "Cenoura cozida", "caloriasPor100g": 35, "proteina": 0.9, "carboidrato": 8.2, "gordura": 0.2 },
-  { "id": 42, "nome": "Abobrinha refogada", "caloriasPor100g": 25, "proteina": 1.2, "carboidrato": 3.0, "gordura": 1.0 },
-  { "id": 43, "nome": "Azeite de oliva", "caloriasPor100g": 884, "proteina": 0.0, "carboidrato": 0.0, "gordura": 100.0 },
-  { "id": 44, "nome": "Óleo de soja", "caloriasPor100g": 884, "proteina": 0.0, "carboidrato": 0.0, "gordura": 100.0 },
-  { "id": 45, "nome": "Amendoim torrado (sem sal)", "caloriasPor100g": 567, "proteina": 25.8, "carboidrato": 16.1, "gordura": 49.2 },
-  { "id": 46, "nome": "Castanha-de-caju torrada", "caloriasPor100g": 553, "proteina": 18.2, "carboidrato": 30.2, "gordura": 43.8 },
-  { "id": 47, "nome": "Pão francês", "caloriasPor100g": 266, "proteina": 9.0, "carboidrato": 49.0, "gordura": 3.5 },
-  { "id": 48, "nome": "Pão integral fatiado", "caloriasPor100g": 246, "proteina": 10.0, "carboidrato": 41.0, "gordura": 3.4 },
-  { "id": 49, "nome": "Tapioca (goma crua)", "caloriasPor100g": 350, "proteina": 0.0, "carboidrato": 88.0, "gordura": 0.0 },
-  { "id": 50, "nome": "Ovo de codorna cozido", "caloriasPor100g": 158, "proteina": 13.0, "carboidrato": 0.4, "gordura": 11.0 },
-  { "id": 51, "nome": "Carne de sol cozida", "caloriasPor100g": 175, "proteina": 27.0, "carboidrato": 0.0, "gordura": 6.5 },
-  { "id": 52, "nome": "Linguiça de frango assada", "caloriasPor100g": 210, "proteina": 18.0, "carboidrato": 2.0, "gordura": 14.0 },
-  { "id": 53, "nome": "Presunto cozido", "caloriasPor100g": 125, "proteina": 20.0, "carboidrato": 1.0, "gordura": 4.5 },
-  { "id": 54, "nome": "Peito de peru defumado", "caloriasPor100g": 105, "proteina": 22.0, "carboidrato": 1.5, "gordura": 1.8 },
-  { "id": 55, "nome": "Sardinha em lata (em óleo)", "caloriasPor100g": 208, "proteina": 24.6, "carboidrato": 0.1, "gordura": 11.4 },
-  { "id": 56, "nome": "Bacalhau dessalgado cozido", "caloriasPor100g": 100, "proteina": 21.0, "carboidrato": 0.0, "gordura": 0.8 },
-  { "id": 57, "nome": "Camarão cozido", "caloriasPor100g": 99, "proteina": 20.0, "carboidrato": 0.9, "gordura": 1.7 },
-  { "id": 58, "nome": "Ovo mexido (2 ovos + 1 col. chá manteiga)", "caloriasPor100g": 220, "proteina": 12.0, "carboidrato": 1.0, "gordura": 19.0 },
-  { "id": 59, "nome": "Requeijão cremoso", "caloriasPor100g": 264, "proteina": 8.0, "carboidrato": 5.0, "gordura": 23.0 },
-  { "id": 60, "nome": "Ricota", "caloriasPor100g": 138, "proteina": 12.0, "carboidrato": 3.0, "gordura": 8.0 },
-  { "id": 61, "nome": "Leite de coco (em lata)", "caloriasPor100g": 190, "proteina": 1.5, "carboidrato": 2.0, "gordura": 19.0 },
-  { "id": 62, "nome": "Suco de laranja natural (sem açúcar)", "caloriasPor100g": 45, "proteina": 0.7, "carboidrato": 10.4, "gordura": 0.2 },
-  { "id": 63, "nome": "Café preto", "caloriasPor100g": 1, "proteina": 0.1, "carboidrato": 0.0, "gordura": 0.0 },
-  { "id": 64, "nome": "Chá verde", "caloriasPor100g": 0, "proteina": 0.0, "carboidrato": 0.0, "gordura": 0.0 },
-  { "id": 65, "nome": "Refrigerante zero", "caloriasPor100g": 0, "proteina": 0.0, "carboidrato": 0.0, "gordura": 0.0 },
-  { "id": 66, "nome": "Coca-Cola comum", "caloriasPor100g": 42, "proteina": 0.0, "carboidrato": 10.6, "gordura": 0.0 },
-  { "id": 67, "nome": "Mel", "caloriasPor100g": 304, "proteina": 0.3, "carboidrato": 82.4, "gordura": 0.0 },
-  { "id": 68, "nome": "Açúcar refinado", "caloriasPor100g": 387, "proteina": 0.0, "carboidrato": 100.0, "gordura": 0.0 },
-  { "id": 69, "nome": "Chocolate meio amargo (70% cacau)", "caloriasPor100g": 546, "proteina": 5.5, "carboidrato": 40.0, "gordura": 45.0 },
-  { "id": 70, "nome": "Pipoca doce (pronta)", "caloriasPor100g": 450, "proteina": 6.0, "carboidrato": 75.0, "gordura": 15.0 },
-  { "id": 71, "nome": "Pipoca salgada (sem manteiga)", "caloriasPor100g": 380, "proteina": 10.0, "carboidrato": 78.0, "gordura": 5.0 },
-  { "id": 72, "nome": "Pão de queijo (assado)", "caloriasPor100g": 285, "proteina": 8.0, "carboidrato": 30.0, "gordura": 14.0 },
-  { "id": 73, "nome": "Coxinha de frango (frita)", "caloriasPor100g": 290, "proteina": 12.0, "carboidrato": 20.0, "gordura": 16.0 },
-  { "id": 74, "nome": "Hambúrguer bovino (100g cru)", "caloriasPor100g": 240, "proteina": 16.0, "carboidrato": 0.0, "gordura": 19.0 },
-  { "id": 75, "nome": "Cachorro-quente (com pão, salsicha, molho)", "caloriasPor100g": 220, "proteina": 8.0, "carboidrato": 20.0, "gordura": 10.0 },
-  { "id": 76, "nome": "Miojo (macarrão instantâneo, cozido)", "caloriasPor100g": 160, "proteina": 4.0, "carboidrato": 22.0, "gordura": 6.0 },
-  { "id": 77, "nome": "Macarrão espaguete cozido", "caloriasPor100g": 158, "proteina": 5.8, "carboidrato": 31.0, "gordura": 0.9 },
-  { "id": 78, "nome": "Molho de tomate pronto", "caloriasPor100g": 60, "proteina": 2.0, "carboidrato": 10.0, "gordura": 1.5 },
-  { "id": 79, "nome": "Maionese", "caloriasPor100g": 680, "proteina": 1.0, "carboidrato": 0.6, "gordura": 75.0 },
-  { "id": 80, "nome": "Ketchup", "caloriasPor100g": 112, "proteina": 0.8, "carboidrato": 26.0, "gordura": 0.2 },
-  { "id": 81, "nome": "Cenoura crua", "caloriasPor100g": 41, "proteina": 0.9, "carboidrato": 9.6, "gordura": 0.2 },
-  { "id": 82, "nome": "Beterraba cozida", "caloriasPor100g": 44, "proteina": 1.6, "carboidrato": 9.6, "gordura": 0.2 },
-  { "id": 83, "nome": "Abóbora moranga cozida", "caloriasPor100g": 26, "proteina": 1.0, "carboidrato": 6.0, "gordura": 0.1 },
-  { "id": 84, "nome": "Quiabo cozido", "caloriasPor100g": 33, "proteina": 1.9, "carboidrato": 7.5, "gordura": 0.2 },
-  { "id": 85, "nome": "Chuchu cozido", "caloriasPor100g": 22, "proteina": 0.8, "carboidrato": 5.0, "gordura": 0.1 },
-  { "id": 86, "nome": "Berinjela assada", "caloriasPor100g": 25, "proteina": 1.0, "carboidrato": 6.0, "gordura": 0.2 },
-  { "id": 87, "nome": "Pepino cru", "caloriasPor100g": 15, "proteina": 0.7, "carboidrato": 3.6, "gordura": 0.1 },
-  { "id": 88, "nome": "Uva", "caloriasPor100g": 69, "proteina": 0.6, "carboidrato": 18.1, "gordura": 0.2 },
-  { "id": 89, "nome": "Caqui", "caloriasPor100g": 70, "proteina": 0.6, "carboidrato": 18.6, "gordura": 0.2 },
-  { "id": 90, "nome": "Goiaba", "caloriasPor100g": 51, "proteina": 1.1, "carboidrato": 11.6, "gordura": 0.5 },
-  { "id": 91, "nome": "Açaí (polpa pura, sem xarope)", "caloriasPor100g": 60, "proteina": 1.5, "carboidrato": 6.0, "gordura": 4.5 },
-  { "id": 92, "nome": "Leite de amêndoas (com adoçante)", "caloriasPor100g": 15, "proteina": 0.4, "carboidrato": 0.5, "gordura": 1.1 },
-  { "id": 93, "nome": "Whey protein (em pó, sabor neutro)", "caloriasPor100g": 370, "proteina": 80.0, "carboidrato": 4.0, "gordura": 1.5 },
-  { "id": 94, "nome": "Gelatina diet", "caloriasPor100g": 5, "proteina": 3.0, "carboidrato": 0.0, "gordura": 0.0 },
-  { "id": 95, "nome": "Bolo de cenoura (fatia média)", "caloriasPor100g": 320, "proteina": 6.0, "carboidrato": 48.0, "gordura": 12.0 },
-  { "id": 96, "nome": "Brigadeiro (unidade média)", "caloriasPor100g": 380, "proteina": 4.0, "carboidrato": 55.0, "gordura": 17.0 },
-  { "id": 97, "nome": "Biscoito água e sal", "caloriasPor100g": 440, "proteina": 9.0, "carboidrato": 72.0, "gordura": 12.0 },
-  { "id": 98, "nome": "Granola (com mel e frutas secas)", "caloriasPor100g": 470, "proteina": 12.0, "carboidrato": 55.0, "gordura": 22.0 },
-  { "id": 99, "nome": "Creme de avelã (tipo Nutella)", "caloriasPor100g": 539, "proteina": 6.0, "carboidrato": 58.0, "gordura": 31.0 },
-  { "id": 100, "nome": "Água de coco natural", "caloriasPor100g": 19, "proteina": 0.2, "carboidrato": 4.5, "gordura": 0.2 }
+  {
+    "id": 1,
+    "nome": "Arroz branco cozido",
+    "caloriasPor100g": 130,
+    "proteina": 2.7,
+    "carboidrato": 28.2,
+    "gordura": 0.3
+  },
+  {
+    "id": 2,
+    "nome": "Arroz integral cozido",
+    "caloriasPor100g": 111,
+    "proteina": 2.6,
+    "carboidrato": 23.5,
+    "gordura": 0.9
+  },
+  {
+    "id": 3,
+    "nome": "Arroz parboilizado cozido",
+    "caloriasPor100g": 125,
+    "proteina": 2.8,
+    "carboidrato": 27.0,
+    "gordura": 0.5
+  },
+  {
+    "id": 4,
+    "nome": "Feijão carioca cozido",
+    "caloriasPor100g": 77,
+    "proteina": 4.8,
+    "carboidrato": 14.0,
+    "gordura": 0.5
+  },
+  {
+    "id": 5,
+    "nome": "Feijão preto cozido",
+    "caloriasPor100g": 76,
+    "proteina": 4.9,
+    "carboidrato": 13.7,
+    "gordura": 0.5
+  },
+  {
+    "id": 6,
+    "nome": "Lentilha cozida",
+    "caloriasPor100g": 116,
+    "proteina": 9.0,
+    "carboidrato": 20.1,
+    "gordura": 0.4
+  },
+  {
+    "id": 7,
+    "nome": "Peito de frango grelhado",
+    "caloriasPor100g": 165,
+    "proteina": 31.0,
+    "carboidrato": 0.0,
+    "gordura": 3.6
+  },
+  {
+    "id": 8,
+    "nome": "Coxa de frango assada (sem pele)",
+    "caloriasPor100g": 180,
+    "proteina": 26.0,
+    "carboidrato": 0.0,
+    "gordura": 7.5
+  },
+  {
+    "id": 9,
+    "nome": "Alcatra grelhada",
+    "caloriasPor100g": 185,
+    "proteina": 28.0,
+    "carboidrato": 0.0,
+    "gordura": 7.0
+  },
+  {
+    "id": 10,
+    "nome": "Maminha grelhada",
+    "caloriasPor100g": 165,
+    "proteina": 29.0,
+    "carboidrato": 0.0,
+    "gordura": 5.0
+  },
+  {
+    "id": 11,
+    "nome": "Filé mignon grelhado",
+    "caloriasPor100g": 150,
+    "proteina": 30.0,
+    "carboidrato": 0.0,
+    "gordura": 3.5
+  },
+  {
+    "id": 12,
+    "nome": "Carne moída magra (95% magra)",
+    "caloriasPor100g": 140,
+    "proteina": 26.0,
+    "carboidrato": 0.0,
+    "gordura": 4.0
+  },
+  {
+    "id": 13,
+    "nome": "Salmão grelhado",
+    "caloriasPor100g": 208,
+    "proteina": 25.0,
+    "carboidrato": 0.0,
+    "gordura": 12.0
+  },
+  {
+    "id": 14,
+    "nome": "Tilápia assada",
+    "caloriasPor100g": 128,
+    "proteina": 26.0,
+    "carboidrato": 0.0,
+    "gordura": 2.7
+  },
+  {
+    "id": 15,
+    "nome": "Atum em lata (em água)",
+    "caloriasPor100g": 116,
+    "proteina": 25.5,
+    "carboidrato": 0.0,
+    "gordura": 0.9
+  },
+  {
+    "id": 16,
+    "nome": "Ovo cozido",
+    "caloriasPor100g": 155,
+    "proteina": 12.6,
+    "carboidrato": 1.1,
+    "gordura": 10.6
+  },
+  {
+    "id": 17,
+    "nome": "Omelete simples (1 ovo + 1 col. chá óleo)",
+    "caloriasPor100g": 180,
+    "proteina": 10.0,
+    "carboidrato": 0.8,
+    "gordura": 14.0
+  },
+  {
+    "id": 18,
+    "nome": "Queijo mussarela",
+    "caloriasPor100g": 280,
+    "proteina": 22.0,
+    "carboidrato": 2.0,
+    "gordura": 22.0
+  },
+  {
+    "id": 19,
+    "nome": "Queijo prato",
+    "caloriasPor100g": 340,
+    "proteina": 25.0,
+    "carboidrato": 1.0,
+    "gordura": 28.0
+  },
+  {
+    "id": 20,
+    "nome": "Queijo cottage",
+    "caloriasPor100g": 98,
+    "proteina": 12.0,
+    "carboidrato": 3.0,
+    "gordura": 4.0
+  },
+  {
+    "id": 21,
+    "nome": "Leite integral",
+    "caloriasPor100g": 64,
+    "proteina": 3.2,
+    "carboidrato": 4.8,
+    "gordura": 3.6
+  },
+  {
+    "id": 22,
+    "nome": "Leite desnatado",
+    "caloriasPor100g": 35,
+    "proteina": 3.4,
+    "carboidrato": 5.0,
+    "gordura": 0.1
+  },
+  {
+    "id": 23,
+    "nome": "Iogurte natural integral",
+    "caloriasPor100g": 61,
+    "proteina": 3.5,
+    "carboidrato": 4.7,
+    "gordura": 3.3
+  },
+  {
+    "id": 24,
+    "nome": "Iogurte natural desnatado",
+    "caloriasPor100g": 59,
+    "proteina": 5.3,
+    "carboidrato": 7.0,
+    "gordura": 0.4
+  },
+  {
+    "id": 25,
+    "nome": "Banana prata",
+    "caloriasPor100g": 89,
+    "proteina": 1.1,
+    "carboidrato": 22.8,
+    "gordura": 0.3
+  },
+  {
+    "id": 26,
+    "nome": "Maçã",
+    "caloriasPor100g": 52,
+    "proteina": 0.3,
+    "carboidrato": 13.8,
+    "gordura": 0.2
+  },
+  {
+    "id": 27,
+    "nome": "Laranja",
+    "caloriasPor100g": 47,
+    "proteina": 0.9,
+    "carboidrato": 11.8,
+    "gordura": 0.1
+  },
+  {
+    "id": 28,
+    "nome": "Mamão",
+    "caloriasPor100g": 43,
+    "proteina": 0.5,
+    "carboidrato": 10.8,
+    "gordura": 0.1
+  },
+  {
+    "id": 29,
+    "nome": "Abacaxi",
+    "caloriasPor100g": 50,
+    "proteina": 0.5,
+    "carboidrato": 12.6,
+    "gordura": 0.1
+  },
+  {
+    "id": 30,
+    "nome": "Morango",
+    "caloriasPor100g": 32,
+    "proteina": 0.7,
+    "carboidrato": 7.7,
+    "gordura": 0.3
+  },
+  {
+    "id": 31,
+    "nome": "Abacate",
+    "caloriasPor100g": 160,
+    "proteina": 2.0,
+    "carboidrato": 8.5,
+    "gordura": 14.7
+  },
+  {
+    "id": 32,
+    "nome": "Aveia em flocos",
+    "caloriasPor100g": 389,
+    "proteina": 16.9,
+    "carboidrato": 66.3,
+    "gordura": 6.9
+  },
+  {
+    "id": 33,
+    "nome": "Quinoa cozida",
+    "caloriasPor100g": 120,
+    "proteina": 4.4,
+    "carboidrato": 21.3,
+    "gordura": 1.9
+  },
+  {
+    "id": 34,
+    "nome": "Batata doce cozida",
+    "caloriasPor100g": 86,
+    "proteina": 1.6,
+    "carboidrato": 20.1,
+    "gordura": 0.1
+  },
+  {
+    "id": 35,
+    "nome": "Batata inglesa cozida",
+    "caloriasPor100g": 77,
+    "proteina": 2.0,
+    "carboidrato": 17.5,
+    "gordura": 0.1
+  },
+  {
+    "id": 36,
+    "nome": "Mandioca cozida",
+    "caloriasPor100g": 125,
+    "proteina": 1.0,
+    "carboidrato": 29.0,
+    "gordura": 0.3
+  },
+  {
+    "id": 37,
+    "nome": "Brócolis cozido",
+    "caloriasPor100g": 35,
+    "proteina": 2.8,
+    "carboidrato": 7.2,
+    "gordura": 0.4
+  },
+  {
+    "id": 38,
+    "nome": "Couve refogada",
+    "caloriasPor100g": 45,
+    "proteina": 3.0,
+    "carboidrato": 7.5,
+    "gordura": 1.5
+  },
+  {
+    "id": 39,
+    "nome": "Espinafre cozido",
+    "caloriasPor100g": 23,
+    "proteina": 2.9,
+    "carboidrato": 3.6,
+    "gordura": 0.4
+  },
+  {
+    "id": 40,
+    "nome": "Tomate cru",
+    "caloriasPor100g": 18,
+    "proteina": 0.9,
+    "carboidrato": 3.9,
+    "gordura": 0.2
+  },
+  {
+    "id": 41,
+    "nome": "Cenoura cozida",
+    "caloriasPor100g": 35,
+    "proteina": 0.9,
+    "carboidrato": 8.2,
+    "gordura": 0.2
+  },
+  {
+    "id": 42,
+    "nome": "Abobrinha refogada",
+    "caloriasPor100g": 25,
+    "proteina": 1.2,
+    "carboidrato": 3.0,
+    "gordura": 1.0
+  },
+  {
+    "id": 43,
+    "nome": "Azeite de oliva",
+    "caloriasPor100g": 884,
+    "proteina": 0.0,
+    "carboidrato": 0.0,
+    "gordura": 100.0
+  },
+  {
+    "id": 44,
+    "nome": "Óleo de soja",
+    "caloriasPor100g": 884,
+    "proteina": 0.0,
+    "carboidrato": 0.0,
+    "gordura": 100.0
+  },
+  {
+    "id": 45,
+    "nome": "Amendoim torrado (sem sal)",
+    "caloriasPor100g": 567,
+    "proteina": 25.8,
+    "carboidrato": 16.1,
+    "gordura": 49.2
+  },
+  {
+    "id": 46,
+    "nome": "Castanha-de-caju torrada",
+    "caloriasPor100g": 553,
+    "proteina": 18.2,
+    "carboidrato": 30.2,
+    "gordura": 43.8
+  },
+  {
+    "id": 47,
+    "nome": "Pão francês",
+    "caloriasPor100g": 266,
+    "proteina": 9.0,
+    "carboidrato": 49.0,
+    "gordura": 3.5
+  },
+  {
+    "id": 48,
+    "nome": "Pão integral fatiado",
+    "caloriasPor100g": 246,
+    "proteina": 10.0,
+    "carboidrato": 41.0,
+    "gordura": 3.4
+  },
+  {
+    "id": 49,
+    "nome": "Tapioca (goma crua)",
+    "caloriasPor100g": 350,
+    "proteina": 0.0,
+    "carboidrato": 88.0,
+    "gordura": 0.0
+  },
+  {
+    "id": 50,
+    "nome": "Ovo de codorna cozido",
+    "caloriasPor100g": 158,
+    "proteina": 13.0,
+    "carboidrato": 0.4,
+    "gordura": 11.0
+  },
+  {
+    "id": 51,
+    "nome": "Carne de sol cozida",
+    "caloriasPor100g": 175,
+    "proteina": 27.0,
+    "carboidrato": 0.0,
+    "gordura": 6.5
+  },
+  {
+    "id": 52,
+    "nome": "Linguiça de frango assada",
+    "caloriasPor100g": 210,
+    "proteina": 18.0,
+    "carboidrato": 2.0,
+    "gordura": 14.0
+  },
+  {
+    "id": 53,
+    "nome": "Presunto cozido",
+    "caloriasPor100g": 125,
+    "proteina": 20.0,
+    "carboidrato": 1.0,
+    "gordura": 4.5
+  },
+  {
+    "id": 54,
+    "nome": "Peito de peru defumado",
+    "caloriasPor100g": 105,
+    "proteina": 22.0,
+    "carboidrato": 1.5,
+    "gordura": 1.8
+  },
+  {
+    "id": 55,
+    "nome": "Sardinha em lata (em óleo)",
+    "caloriasPor100g": 208,
+    "proteina": 24.6,
+    "carboidrato": 0.1,
+    "gordura": 11.4
+  },
+  {
+    "id": 56,
+    "nome": "Bacalhau dessalgado cozido",
+    "caloriasPor100g": 100,
+    "proteina": 21.0,
+    "carboidrato": 0.0,
+    "gordura": 0.8
+  },
+  {
+    "id": 57,
+    "nome": "Camarão cozido",
+    "caloriasPor100g": 99,
+    "proteina": 20.0,
+    "carboidrato": 0.9,
+    "gordura": 1.7
+  },
+  {
+    "id": 58,
+    "nome": "Ovo mexido (2 ovos + 1 col. chá manteiga)",
+    "caloriasPor100g": 220,
+    "proteina": 12.0,
+    "carboidrato": 1.0,
+    "gordura": 19.0
+  },
+  {
+    "id": 59,
+    "nome": "Requeijão cremoso",
+    "caloriasPor100g": 264,
+    "proteina": 8.0,
+    "carboidrato": 5.0,
+    "gordura": 23.0
+  },
+  {
+    "id": 60,
+    "nome": "Ricota",
+    "caloriasPor100g": 138,
+    "proteina": 12.0,
+    "carboidrato": 3.0,
+    "gordura": 8.0
+  },
+  {
+    "id": 61,
+    "nome": "Leite de coco (em lata)",
+    "caloriasPor100g": 190,
+    "proteina": 1.5,
+    "carboidrato": 2.0,
+    "gordura": 19.0
+  },
+  {
+    "id": 62,
+    "nome": "Suco de laranja natural (sem açúcar)",
+    "caloriasPor100g": 45,
+    "proteina": 0.7,
+    "carboidrato": 10.4,
+    "gordura": 0.2
+  },
+  {
+    "id": 63,
+    "nome": "Café preto",
+    "caloriasPor100g": 1,
+    "proteina": 0.1,
+    "carboidrato": 0.0,
+    "gordura": 0.0
+  },
+  {
+    "id": 64,
+    "nome": "Chá verde",
+    "caloriasPor100g": 0,
+    "proteina": 0.0,
+    "carboidrato": 0.0,
+    "gordura": 0.0
+  },
+  {
+    "id": 65,
+    "nome": "Refrigerante zero",
+    "caloriasPor100g": 0,
+    "proteina": 0.0,
+    "carboidrato": 0.0,
+    "gordura": 0.0
+  },
+  {
+    "id": 66,
+    "nome": "Coca-Cola comum",
+    "caloriasPor100g": 42,
+    "proteina": 0.0,
+    "carboidrato": 10.6,
+    "gordura": 0.0
+  },
+  {
+    "id": 67,
+    "nome": "Mel",
+    "caloriasPor100g": 304,
+    "proteina": 0.3,
+    "carboidrato": 82.4,
+    "gordura": 0.0
+  },
+  {
+    "id": 68,
+    "nome": "Açúcar refinado",
+    "caloriasPor100g": 387,
+    "proteina": 0.0,
+    "carboidrato": 100.0,
+    "gordura": 0.0
+  },
+  {
+    "id": 69,
+    "nome": "Chocolate meio amargo (70% cacau)",
+    "caloriasPor100g": 546,
+    "proteina": 5.5,
+    "carboidrato": 40.0,
+    "gordura": 45.0
+  },
+  {
+    "id": 70,
+    "nome": "Pipoca doce (pronta)",
+    "caloriasPor100g": 450,
+    "proteina": 6.0,
+    "carboidrato": 75.0,
+    "gordura": 15.0
+  },
+  {
+    "id": 71,
+    "nome": "Pipoca salgada (sem manteiga)",
+    "caloriasPor100g": 380,
+    "proteina": 10.0,
+    "carboidrato": 78.0,
+    "gordura": 5.0
+  },
+  {
+    "id": 72,
+    "nome": "Pão de queijo (assado)",
+    "caloriasPor100g": 285,
+    "proteina": 8.0,
+    "carboidrato": 30.0,
+    "gordura": 14.0
+  },
+  {
+    "id": 73,
+    "nome": "Coxinha de frango (frita)",
+    "caloriasPor100g": 290,
+    "proteina": 12.0,
+    "carboidrato": 20.0,
+    "gordura": 16.0
+  },
+  {
+    "id": 74,
+    "nome": "Hambúrguer bovino (100g cru)",
+    "caloriasPor100g": 240,
+    "proteina": 16.0,
+    "carboidrato": 0.0,
+    "gordura": 19.0
+  },
+  {
+    "id": 75,
+    "nome": "Cachorro-quente (com pão, salsicha, molho)",
+    "caloriasPor100g": 220,
+    "proteina": 8.0,
+    "carboidrato": 20.0,
+    "gordura": 10.0
+  },
+  {
+    "id": 76,
+    "nome": "Miojo (macarrão instantâneo, cozido)",
+    "caloriasPor100g": 160,
+    "proteina": 4.0,
+    "carboidrato": 22.0,
+    "gordura": 6.0
+  },
+  {
+    "id": 77,
+    "nome": "Macarrão espaguete cozido",
+    "caloriasPor100g": 158,
+    "proteina": 5.8,
+    "carboidrato": 31.0,
+    "gordura": 0.9
+  },
+  {
+    "id": 78,
+    "nome": "Molho de tomate pronto",
+    "caloriasPor100g": 60,
+    "proteina": 2.0,
+    "carboidrato": 10.0,
+    "gordura": 1.5
+  },
+  {
+    "id": 79,
+    "nome": "Maionese",
+    "caloriasPor100g": 680,
+    "proteina": 1.0,
+    "carboidrato": 0.6,
+    "gordura": 75.0
+  },
+  {
+    "id": 80,
+    "nome": "Ketchup",
+    "caloriasPor100g": 112,
+    "proteina": 0.8,
+    "carboidrato": 26.0,
+    "gordura": 0.2
+  },
+  {
+    "id": 81,
+    "nome": "Cenoura crua",
+    "caloriasPor100g": 41,
+    "proteina": 0.9,
+    "carboidrato": 9.6,
+    "gordura": 0.2
+  },
+  {
+    "id": 82,
+    "nome": "Beterraba cozida",
+    "caloriasPor100g": 44,
+    "proteina": 1.6,
+    "carboidrato": 9.6,
+    "gordura": 0.2
+  },
+  {
+    "id": 83,
+    "nome": "Abóbora moranga cozida",
+    "caloriasPor100g": 26,
+    "proteina": 1.0,
+    "carboidrato": 6.0,
+    "gordura": 0.1
+  },
+  {
+    "id": 84,
+    "nome": "Quiabo cozido",
+    "caloriasPor100g": 33,
+    "proteina": 1.9,
+    "carboidrato": 7.5,
+    "gordura": 0.2
+  },
+  {
+    "id": 85,
+    "nome": "Chuchu cozido",
+    "caloriasPor100g": 22,
+    "proteina": 0.8,
+    "carboidrato": 5.0,
+    "gordura": 0.1
+  },
+  {
+    "id": 86,
+    "nome": "Berinjela assada",
+    "caloriasPor100g": 25,
+    "proteina": 1.0,
+    "carboidrato": 6.0,
+    "gordura": 0.2
+  },
+  {
+    "id": 87,
+    "nome": "Pepino cru",
+    "caloriasPor100g": 15,
+    "proteina": 0.7,
+    "carboidrato": 3.6,
+    "gordura": 0.1
+  },
+  {
+    "id": 88,
+    "nome": "Uva",
+    "caloriasPor100g": 69,
+    "proteina": 0.6,
+    "carboidrato": 18.1,
+    "gordura": 0.2
+  },
+  {
+    "id": 89,
+    "nome": "Caqui",
+    "caloriasPor100g": 70,
+    "proteina": 0.6,
+    "carboidrato": 18.6,
+    "gordura": 0.2
+  },
+  {
+    "id": 90,
+    "nome": "Goiaba",
+    "caloriasPor100g": 51,
+    "proteina": 1.1,
+    "carboidrato": 11.6,
+    "gordura": 0.5
+  },
+  {
+    "id": 91,
+    "nome": "Açaí (polpa pura, sem xarope)",
+    "caloriasPor100g": 60,
+    "proteina": 1.5,
+    "carboidrato": 6.0,
+    "gordura": 4.5
+  },
+  {
+    "id": 92,
+    "nome": "Leite de amêndoas (com adoçante)",
+    "caloriasPor100g": 15,
+    "proteina": 0.4,
+    "carboidrato": 0.5,
+    "gordura": 1.1
+  },
+  {
+    "id": 93,
+    "nome": "Whey protein (em pó, sabor neutro)",
+    "caloriasPor100g": 370,
+    "proteina": 80.0,
+    "carboidrato": 4.0,
+    "gordura": 1.5
+  },
+  {
+    "id": 94,
+    "nome": "Gelatina diet",
+    "caloriasPor100g": 5,
+    "proteina": 3.0,
+    "carboidrato": 0.0,
+    "gordura": 0.0
+  },
+  {
+    "id": 95,
+    "nome": "Bolo de cenoura (fatia média)",
+    "caloriasPor100g": 320,
+    "proteina": 6.0,
+    "carboidrato": 48.0,
+    "gordura": 12.0
+  },
+  {
+    "id": 96,
+    "nome": "Brigadeiro (unidade média)",
+    "caloriasPor100g": 380,
+    "proteina": 4.0,
+    "carboidrato": 55.0,
+    "gordura": 17.0
+  },
+  {
+    "id": 97,
+    "nome": "Biscoito água e sal",
+    "caloriasPor100g": 440,
+    "proteina": 9.0,
+    "carboidrato": 72.0,
+    "gordura": 12.0
+  },
+  {
+    "id": 98,
+    "nome": "Granola (com mel e frutas secas)",
+    "caloriasPor100g": 470,
+    "proteina": 12.0,
+    "carboidrato": 55.0,
+    "gordura": 22.0
+  },
+  {
+    "id": 99,
+    "nome": "Creme de avelã (tipo Nutella)",
+    "caloriasPor100g": 539,
+    "proteina": 6.0,
+    "carboidrato": 58.0,
+    "gordura": 31.0
+  },
+  {
+    "id": 100,
+    "nome": "Água de coco natural",
+    "caloriasPor100g": 19,
+    "proteina": 0.2,
+    "carboidrato": 4.5,
+    "gordura": 0.2
+  }
 ]
