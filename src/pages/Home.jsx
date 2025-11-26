@@ -168,20 +168,20 @@ export default function Home() {
         {/* Coluna Esquerda - Post 1 */}
         <div className="col-md-4">
           <Link
-            to={`/forum/${displayPosts[1].id}`}
+            to={`/forum/${displayPosts.id}`}
             className="text-decoration-none"
           >
             <div className="card h-100">
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">
-                  {displayPosts[1]?.title || "Post em destaque"}
+                  {displayPosts.title || "Post em destaque"}
                 </h5>
                 <p className="card-text text-secondary">
-                  Por {displayPosts[1]?.author || "Autor desconhecido"} •{" "}
-                  {displayPosts[1]?.date || "Data desconhecida"}
+                  Por {displayPosts.author || "Autor desconhecido"} •{" "}
+                  {displayPosts.date || "Data desconhecida"}
                 </p>
                 <span className="text-muted">
-                  {displayPosts[1]?.replies || 0} respostas
+                  {displayPosts.replies || 0} respostas
                 </span>
               </div>
             </div>
@@ -191,7 +191,7 @@ export default function Home() {
         {/* Coluna Central - Post 2 */}
         <div className="col-md-4">
           <Link
-            to={`/forum/${displayPosts[2].id}`}
+            to={`/forum/${displayPosts.id}`}
             className="text-decoration-none"
           >
             <div className="card h-100">

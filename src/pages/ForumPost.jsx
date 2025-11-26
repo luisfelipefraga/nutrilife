@@ -1,5 +1,4 @@
 //Tela da publicação
-import { backdropClasses } from "@mui/material";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 
@@ -21,6 +20,7 @@ export default function ForumPost() {
 
   const handleAddComment = (e) => {
     e.preventDefault();
+    //Não libera comentario
     if (!newComment.trim()) return;
 
     const updatedPosts = posts.map((p) => {
