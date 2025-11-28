@@ -17,36 +17,42 @@ export default function Home() {
   }, []);
 
   // Pega os 3 posts mais recentes
-  const recentPosts = posts.slice(0, 3);
+  // Pega os 3 posts mais recentes
+const recentPosts = Array.isArray(posts) ? posts.slice(0, 3) : [];
 
-  // Se tiver menos de 3 posts, preenche com placeholders revisar isso
-  // Ajustar erro do terceiro card que não pucha os valores do post de id 3
-  const displayPosts =
-    recentPosts.length > 0
-      ? recentPosts
-      : [
-          {
-            id: 990,
-            title: "Como substituir açúcar?",
-            author: "Ana L.",
-            date: "Ontem",
-            replies: 0,
-          },
-          {
-            id: 991,
-            title: "Suplementos são necessários?",
-            author: "Carlos M.",
-            date: "Hoje",
-            replies: 0,
-          },
-          {
-            id: 993,
-            title: "Melhor horário para água?",
-            author: "Juliana R.",
-            date: "Há 2 dias",
-            replies: 0,
-          },
-        ];
+// Se tiver menos de 3 posts, preenche com placeholders
+const displayPosts = recentPosts.length > 0
+  ? recentPosts
+  : [
+      { id: 999, title: "Como substituir açúcar?", author: "Ana L.", date: "Ontem", replies: 3 },
+      { id: 998, title: "Suplementos são necessários?", author: "Carlos M.", date: "Hoje", replies: 5 },
+      { id: 997, title: "Melhor horário para água?", author: "Juliana R.", date: "Há 2 dias", replies: 8 },
+    ];
+
+// Garanta que displayPosts tenha 3 elementos
+if (displayPosts.length < 3) {
+  const placeholders = [
+    { id: 996, title: "Qual a melhor fruta para o café da manhã?", author: "Autor desconhecido", date: "Há 3 dias", replies: 2 },
+    { id: 995, title: "Como fazer uma refeição balanceada?", author: "Autor desconhecido", date: "Há 4 dias", replies: 1 },
+    { id: 994, title: "Dicas para comer saudável no trabalho", author: "Autor desconhecido", date: "Há 5 dias", replies: 0 },
+  ];
+  while (displayPosts.length < 3) {
+    displayPosts.push(placeholders[displayPosts.length]);
+  }
+}
+
+        // Função para converter timestamp em string legível
+    const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffTime = now - date;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return "Hoje";
+    if (diffDays === 1) return "Ontem";
+    if (diffDays < 7) return `${diffDays} dias atrás`;
+    return date.toLocaleDateString('pt-BR');
+    };
 
   return (
     <div className="container py-5">
@@ -174,14 +180,14 @@ export default function Home() {
             <div className="card h-100">
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">
-                  {displayPosts.title || "Post em destaque"}
+                  {displayPosts[0].title || "Post em destaque"}
                 </h5>
                 <p className="card-text text-secondary">
-                  Por {displayPosts.author || "Autor desconhecido"} •{" "}
-                  {displayPosts.date || "Data desconhecida"}
+                  Por {displayPosts[0].author || "Autor desconhecido"} •{" "}
+                  {(formatDate(displayPosts[0].date)? displayPosts[0].date : "Data desconhecida") || "Data desconhecida"}
                 </p>
                 <span className="text-muted">
-                  {displayPosts.replies || 0} respostas
+                  {displayPosts[0].replies || 0} respostas
                 </span>
               </div>
             </div>
@@ -197,14 +203,14 @@ export default function Home() {
             <div className="card h-100">
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">
-                  {displayPosts[2]?.title || "Post em destaque"}
+                  {displayPosts[1].title || "Post em destaque"}
                 </h5>
                 <p className="card-text text-secondary">
-                  Por {displayPosts[2]?.author || "Autor desconhecido"} •{" "}
-                  {displayPosts[2]?.date || "Data desconhecida"}
+                  Por {displayPosts[1].author || "Autor desconhecido"} •{" "}
+                  {formatDate(displayPosts[1].date) ? displayPosts[1].date : "Data desconhecida"}
                 </p>
                 <span className="text-muted">
-                  {displayPosts[2]?.replies || 0} respostas
+                  {displayPosts[1].replies || 0} respostas
                 </span>
               </div>
             </div>
@@ -214,20 +220,20 @@ export default function Home() {
         {/* Coluna Direita - Post 3 (destaque maior) */}
         <div className="col-md-4">
           <Link
-            to={`/forum/${displayPosts[3]?.id}`}
+            to={`/forum/${displayPosts[2].id}`}
             className="text-decoration-none"
           >
             <div className="card h-100" style={{ border: "2px solid #1976D2" }}>
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">
-                  {displayPosts[3]?.title || "Post em destaque"}
+                  {displayPosts[2].title || "Post em destaque"}
                 </h5>
                 <p className="card-text text-secondary">
-                  Por {displayPosts[3]?.author || "Autor desconhecido"} •{" "}
-                  {displayPosts[3]?.date || "Data desconhecida"}
+                  Por {displayPosts[2].author || "Autor desconhecido"} •{" "}
+                  {formatDate(displayPosts[2].date) ? displayPosts[2].date : "Data desconhecida"}
                 </p>
                 <span className="text-muted">
-                  {displayPosts[3]?.replies || 0} respostas
+                  {displayPosts[2].replies || 0} respostas
                 </span>
               </div>
             </div>

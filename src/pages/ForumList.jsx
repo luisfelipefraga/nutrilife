@@ -19,9 +19,9 @@ export default function ForumList() {
       }
     }
     return [
-      { id: 1, title: "Como substituir açúcar?", author: "Ana L.", date: Date.now(), replies: 0, content: "Estou tentando reduzir o açúcar... alguém tem dicas?" },
-      { id: 2, title: "Suplementos são necessários?", author: "Carlos M.", date: Date.now(), replies: 0, content: "Estou na academia há 3 meses..." },
-      { id: 3, title: "Qual o papel da proteina na alimentação?", author: "José B.", date: Date.now(), replies: 0, content: "Estou na academia há 3 meses..." },
+      { id: 1, title: "Como substituir açúcar?", author: "Ana L.", date: Date.now(timestamp), replies: 0, content: "Estou tentando reduzir o açúcar... alguém tem dicas?" },
+      { id: 2, title: "Suplementos são necessários?", author: "Carlos M.", date: Date.now(timestamp), replies: 0, content: "Estou na academia há 3 meses..." },
+      { id: 3, title: "Qual o papel da proteina na alimentação?", author: "José B.", date: Date.now(timestamp), replies: 0, content: "Estou na academia há 3 meses..." },
     ];
   });
 

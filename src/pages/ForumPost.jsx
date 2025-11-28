@@ -29,7 +29,7 @@ export default function ForumPost() {
           id: Date.now(),
           author: "Você",
           text: newComment,
-          date: "Agora",
+          date: Date.now(),
         };
         return {
           ...p,
@@ -130,7 +130,7 @@ export default function ForumPost() {
         <div key={comment.id} className="card mb-2 p-3">
           <p>{comment.text}</p>
           <small className="text-secondary">
-            — {comment.author}, {comment.date}
+            — {comment.author}, {formatDate(comment.date) ? "Data antiga" : "Error 404"}
           </small>
         </div>
       ))}
