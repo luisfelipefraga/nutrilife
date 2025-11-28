@@ -19,14 +19,29 @@ export default function ForumList() {
       }
     }
     return [
-      { id: 1, title: "Como substituir açúcar?", author: "Ana L.", date: "Ontem", replies: 3, content: "Estou tentando reduzir o açúcar... alguém tem dicas?" },
-      { id: 2, title: "Suplementos são necessários?", author: "Carlos M.", date: "Hoje", replies: 5, content: "Estou na academia há 3 meses..." },
+      { id: 1, title: "Como substituir açúcar?", author: "Ana L.", date: Date.now(), replies: 0, content: "Estou tentando reduzir o açúcar... alguém tem dicas?" },
+      { id: 2, title: "Suplementos são necessários?", author: "Carlos M.", date: Date.now(), replies: 0, content: "Estou na academia há 3 meses..." },
+      { id: 3, title: "Qual o papel da proteina na alimentação?", author: "José B.", date: Date.now(), replies: 0, content: "Estou na academia há 3 meses..." },
     ];
   });
 
   useEffect(() => {
     localStorage.setItem('forumPosts', JSON.stringify(posts));
   }, [posts]);
+
+    // Função para converter timestamp em string legível
+    const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffTime = now - date;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return "Hoje";
+    if (diffDays === 1) return "Ontem";
+    if (diffDays < 7) return `${diffDays} dias atrás`;
+    return date.toLocaleDateString('pt-BR');
+    };
+
 
   return (
     <div className="container py-2">
@@ -62,7 +77,7 @@ export default function ForumList() {
             <div className="card mb-3 p-3 hover-shadow">
               <h5 className="text-primary">{post.title}</h5>
               <p className="text-secondary">
-                Por {post.author} • {post.date}
+                Por {post.author} • {formatDate(post.date)}
               </p>
               <p className="text-muted">{post.replies} respostas</p>
             </div>

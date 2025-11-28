@@ -44,6 +44,20 @@ export default function ForumPost() {
     localStorage.setItem("forumPosts", JSON.stringify(updatedPosts));
     setNewComment("");
   };
+
+// Função para converter timestamp em string legível
+    const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffTime = now - date;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return "Hoje";
+    if (diffDays === 1) return "Ontem";
+    if (diffDays < 7) return `${diffDays} dias atrás`;
+    return date.toLocaleDateString('pt-BR');
+    };
+
   //Cria uma validação com o usuário para excluir o post
   const handleDelete = (postId) => {
     if (!window.confirm("Tem certeza que deseja excluir este post?")) return;
@@ -78,7 +92,7 @@ export default function ForumPost() {
       <div className="card p-4 mb-4" id="cardPost">
         <h2>{post.title}</h2>
         <p className="text-secondary">
-          Por {post.author} • {post.date}
+          Por {post.author} • {formatDate(post.date)}
         </p>
         <p>{post.content}</p>
       </div>

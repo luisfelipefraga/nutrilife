@@ -27,6 +27,8 @@ export default function CreatePost() {
       console.error("Erro ao carregar posts:", e);
       posts = [];
     }
+    
+
 
     // Gera novo ID
     const newId =
@@ -38,7 +40,7 @@ export default function CreatePost() {
       title: title.trim(),
       content: content.trim(),
       author: "Você",
-      date: "Agora",
+      date: Date.now(),
       replies: 0,
       comments: [],
     };
