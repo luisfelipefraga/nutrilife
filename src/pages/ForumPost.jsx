@@ -130,7 +130,7 @@ export default function ForumPost() {
         <div key={comment.id} className="card mb-2 p-3">
           <p>{comment.text}</p>
           <small className="text-secondary">
-            — {comment.author}, {formatDate(comment.date) ? "Data antiga" : "Error 404"}
+            — {comment.author}, {formatDate(comment.date) ?? "Data Perdida"}
           </small>
         </div>
       ))}

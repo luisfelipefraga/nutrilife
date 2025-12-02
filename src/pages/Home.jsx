@@ -41,8 +41,11 @@ if (displayPosts.length < 3) {
   }
 }
 
-        // Função para converter timestamp em string legível
-    const formatDate = (timestamp) => {
+    const formatDate = (input) => {
+  // Se for string já formatada ("Ontem", "Há 5 dias"), retorna ela mesma
+  if (typeof input === 'string' && !isNaN(Number(input))) {
+    // É um número em formato de string? Converte para número.
+    const timestamp = Number(input);
     const date = new Date(timestamp);
     const now = new Date();
     const diffTime = now - date;
@@ -52,7 +55,28 @@ if (displayPosts.length < 3) {
     if (diffDays === 1) return "Ontem";
     if (diffDays < 7) return `${diffDays} dias atrás`;
     return date.toLocaleDateString('pt-BR');
-    };
+  }
+
+  // Se for string já formatada (como "Ontem"), retorna direto
+  if (typeof input === 'string') {
+    return input; // ex: "Ontem", "Há 5 dias"
+  }
+
+  // Se for número (timestamp)
+  if (typeof input === 'number') {
+    const date = new Date(input);
+    const now = new Date();
+    const diffTime = now - date;
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays === 0) return "Hoje";
+    if (diffDays === 1) return "Ontem";
+    if (diffDays < 7) return `${diffDays} dias atrás`;
+    return date.toLocaleDateString('pt-BR');
+  }
+
+  return "Data desconhecida";
+};
 
   return (
     <div className="container py-5">
@@ -174,7 +198,7 @@ if (displayPosts.length < 3) {
         {/* Coluna Esquerda - Post 1 */}
         <div className="col-md-4">
           <Link
-            to={`/forum/${displayPosts.id}`}
+            to={`/forum/${displayPosts[0].id}`}
             className="text-decoration-none"
           >
             <div className="card h-100">
@@ -184,7 +208,7 @@ if (displayPosts.length < 3) {
                 </h5>
                 <p className="card-text text-secondary">
                   Por {displayPosts[0].author || "Autor desconhecido"} •{" "}
-                  {(formatDate(displayPosts[0].date)? displayPosts[0].date : "Data desconhecida") || "Data desconhecida"}
+                  {formatDate(displayPosts[0].date)}
                 </p>
                 <span className="text-muted">
                   {displayPosts[0].replies || 0} respostas
@@ -197,7 +221,7 @@ if (displayPosts.length < 3) {
         {/* Coluna Central - Post 2 */}
         <div className="col-md-4">
           <Link
-            to={`/forum/${displayPosts.id}`}
+            to={`/forum/${displayPosts[1].id}`}
             className="text-decoration-none"
           >
             <div className="card h-100">
@@ -207,7 +231,7 @@ if (displayPosts.length < 3) {
                 </h5>
                 <p className="card-text text-secondary">
                   Por {displayPosts[1].author || "Autor desconhecido"} •{" "}
-                  {formatDate(displayPosts[1].date) ? displayPosts[1].date : "Data desconhecida"}
+                  {formatDate(displayPosts[1].date)}
                 </p>
                 <span className="text-muted">
                   {displayPosts[1].replies || 0} respostas
@@ -230,7 +254,7 @@ if (displayPosts.length < 3) {
                 </h5>
                 <p className="card-text text-secondary">
                   Por {displayPosts[2].author || "Autor desconhecido"} •{" "}
-                  {formatDate(displayPosts[2].date) ? displayPosts[2].date : "Data desconhecida"}
+                  {formatDate(displayPosts[2].date)}
                 </p>
                 <span className="text-muted">
                   {displayPosts[2].replies || 0} respostas
